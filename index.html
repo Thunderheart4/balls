@@ -1,0 +1,165 @@
+<style type="text/css">
+	.sball{
+		height: 25px;
+		width: 25px;
+		background-color: blue;
+		border-radius: 40px;
+		position: absolute;
+		transition: linear 1s;
+	}
+	.mball{
+		height: 50px;
+		width: 50px;
+		background-color: red;
+		border-radius: 40px;
+		position: absolute;
+		transition: linear 1s;
+	}
+	.bball{
+		height: 75px;
+		width: 75px;
+		background-color: green;
+		border-radius: 40px;
+		position: absolute;
+		transition: linear 1s;
+	}
+</style>
+
+<div class="main">
+	<p>Собери все шарики за 10 секунд. Очки: <span class="score">0</span></p>
+	<div class="sball b1" style="top: 123px; left: 234px;"></div>
+	<div class="sball b2" style="top: 434px; left: 663px;"></div>
+	<div class="mball b3" style="top: 23px; left: 132px;"></div>
+	<div class="mball b4" style="top: 341px; left: 44px;"></div>
+	<div class="mball b5" style="top: 243px; left: 212px;"></div>
+	<div class="bball b6" style="top: 224px; left: 234px;"></div>
+	<div class="bball b7" style="top: 375px; left: 522px;"></div>
+	<div class="bball b8" style="top: 21px; left: 632px;"></div>
+</div>
+
+<script type="text/javascript">
+	let b1=document.querySelector('.b1')
+	let b2=document.querySelector('.b2')
+	let b3=document.querySelector('.b3')
+	let b4=document.querySelector('.b4')
+	let b5=document.querySelector('.b5')
+	let b6=document.querySelector('.b6')
+	let b7=document.querySelector('.b7')
+	let b8=document.querySelector('.b8')
+	let span=document.querySelector('.score')
+	let main=document.querySelector('.main')
+	let score=0
+	let pos1l=234
+	let pos2l=663
+	let pos3t=23
+	let pos4t=341
+	let pos5l=212
+	let pos6l=234
+	let pos7t=375
+	let pos8t=21
+
+	let move=function(){
+		pos1l=pos1l+50
+		b1.style.left=pos1l+"px"
+
+		pos2l=pos2l+50
+		b2.style.left=pos2l+"px"
+
+		pos3t=pos3t+50
+		b3.style.top=pos3t+"px"
+
+		pos4t=pos4t+50
+		b4.style.top=pos4t+"px"
+
+		pos5l=pos5l+50
+		b5.style.left=pos5l+"px"
+
+		pos6l=pos6l+50
+		b6.style.left=pos6l+"px"
+
+		pos7t=pos7t+50
+		b7.style.top=pos7t+"px"
+
+		pos8t=pos8t+50
+		b8.style.top=pos8t+"px"
+	}
+	setInterval(move, 1000)
+	let away=function(){
+		main.style.display='none'
+	}
+	setTimeout(away, 10000)
+
+	b1.onclick=function(){
+		score=score+1
+		span.innerHTML=score
+		b1.style.display="none"
+		if(score==17){
+			main.style.display="none"
+			alert("Вы выиграли")
+		}
+	}
+	b2.onclick=function(){
+		score=score+1
+		span.innerHTML=score
+		b2.style.display="none"
+		if(score==17){
+			main.style.display="none"
+			alert("Вы выиграли")
+		}
+	}
+	b3.onclick=function(){
+		score=score+2
+		span.innerHTML=score
+		b3.style.display="none"
+		if(score==17){
+			main.style.display="none"
+			alert("Вы выиграли")
+		}
+	}
+	b4.onclick=function(){
+		score=score+2
+		span.innerHTML=score
+		b4.style.display="none"
+		if(score==17){
+			main.style.display="none"
+			alert("Вы выиграли")
+		}
+	}
+
+	b5.onclick=function(){
+		score=score+2
+		span.innerHTML=score
+		b5.style.display="none"
+		if(score==17){
+			main.style.display="none"
+			alert("Вы выиграли")
+		}
+	}
+	b6.onclick=function(){
+		score=score+3
+		span.innerHTML=score
+		b6.style.display="none"
+		if(score==17){
+			main.style.display="none"
+			alert("Вы выиграли")
+		}
+	}
+	b7.onclick=function(){
+		score=score+3
+		span.innerHTML=score
+		b7.style.display="none"
+		if(score==17){
+			main.style.display="none"
+			alert("Вы выиграли")
+		}
+	}
+	b8.onclick=function(){
+		score=score+3
+		span.innerHTML=score
+		b8.style.display="none"
+		if(score==17){
+			main.style.display="none"
+			alert("Вы выиграли")
+		}
+	}
+</script>
